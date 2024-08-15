@@ -4,31 +4,26 @@
     class Compra{
         private int $codigo;
         private string $cartaoCredito;
-        private string $cpf;
         private string $nome;
-        private string $data;
-        private float $valor;
-        private int $quantidade;
-        private int $codigoLivro;
-
+        private string $dataDeValidade;
+        private string $cvv;
+        private string $cpf;
+        
         //Construtor
         public function __construct(int $codigo,
                                     string $cartaoCredito,
-                                    string $cpf,
                                     string $nome,
-                                    string $data,
-                                    float $valor,
-                                    int $quantidade,
-                                    int $codigoLivro)
+                                    string $dataDeValidade,  
+                                    string $cvv,
+                                    string $cpf)
         {
             $this->codigo = $codigo;
             $this->cartaoCredito = $cartaoCredito;
-            $this->cpf = $cpf;
             $this->nome = $nome;
-            $this->data = $data;
-            $this->valor = $valor;
-            $this->quantidade = $quantidade;
-            $this->codigoLivro = $codigoLivro;
+            $this->dataDeValidade = $dataDeValidade;
+            $this->cvv = $cvv;
+            $this->cpf = $cpf;
+           
         }//Fim do construtor
    
    public function __get(string $campo)
@@ -44,12 +39,10 @@
     public function imprimir(){
        return "<br>Código: " . $this->codigo . 
               "<br>Cartão de Crédito: " . $this->cartaoCredito . 
+              "<br>Nome: " . $this->nome . 
+              "<br>Data de Validade: " .$this->dataDeValidade .
+              "<br>CVV: " . $this->cvv . 
               "<br>CPF: " . $this->cpf . 
-              "<br>Nome: " .$this->nome .
-              "<br>Data da Compra: " . $this->data . 
-              "<br>Valor: " . $this->valor . 
-              "<br>Quantidade: " . $this->quantidade . 
-              "<br>Código Livro: " . $this->codigoLivro;
         }//Fim do imprimir
     }//Fim da classe Compra
 ?>

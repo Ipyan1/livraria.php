@@ -22,7 +22,7 @@
 
     
     echo $usuario1->validacaoLogin() . "<br>";
-    if($usuario1->validarLogin() == "Login Valido!")
+    if($usuario1->validarUsuario() == "Login Valido!")
         echo $livros1->consulta() . "<br>";
         echo $livros1->realizarCompra() . "<br>";
         echo $livros1->decisaoReserva("sim") . "<br>";
