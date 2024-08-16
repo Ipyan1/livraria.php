@@ -8,13 +8,13 @@
 
     $usuario1 = new Usuario("777", "Fabi", "SBC", "40028922", "2000", "Fabio", "loveti");
 
-    $livros1 = new Livros(777, "Harry Potter", "J.K Rowling", 30.00, 1);
+    $livros1 = new Livros(1, "A Guerra dos Tronos", "George R.R Martin", 29,90, 1);
 
-    $reserva1 = new Reserva(1, "Harry", "19:30", "07/08");
+    $reserva1 = new Reserva(02, "A Pedra Filosofal", " ", "davi@davi.com.br","Davi");
 
-    $compra1 = new Compra("777", "Harry Potter", "J.K Rowling", 30.00, 1);
+    $compra1 = new Compra("01", "4455.4455.4555", "Davi ", "01/01/2025", "123", "123.456.789-00");
 
-    $pessoa1 = new Pessoa("777", "Fabio", "SBC", "40028922", "2000", "Fabi", "lovetec");
+    $pessoa1 = new Pessoa("555.555.555-00", "Fabio", "Rua Nestor, 41 - SBC", "4002-8922", "15/01/2000", "Fabi", "lovetec");
     
     $conexao = new Conexao();
 
@@ -32,7 +32,7 @@
     echo $usuario1->validarUsuario(" ", " ");
     echo $livros1->imprimir();
     echo $reserva1->imprimir();
-    echo $compra1->realizarCompra();
+    echo $compra1->imprimir();
     echo "<br>".$pessoa1->imprimir();
     echo
     

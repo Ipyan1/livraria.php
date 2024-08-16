@@ -3,24 +3,26 @@
 
     class Reserva{
         private int $codigo;
-        private string $email;
-        private string $nome;
         private string $titulo;
         private string $qtdLivro;
+        private string $email;
+        private string $nome;
         
+               
 
         //imprimir
         public function __construct(int $codigo,
-                                    string $email,
-                                    string $nome,
                                     string $titulo,
-                                    string $qtdLivro)
+                                    int    $qtdLivro,
+                                    string $email,
+                                    string $nome)
         {
             $this->codigo = $codigo;
-            $this->email = $email;
-            $this->nome = $nome;
             $this->titulo = $titulo;
             $this->qtdLivro = $qtdLivro;
+            $this->email = $email;
+            $this->nome = $nome;
+           
         }
 
         //get
@@ -36,10 +38,11 @@
 
         public function imprimir():string{
             return "<br>Código: "  .$this->codigo.
-                    "<br>E-mail: " .$this->email.
-                   "<br>Nome:    " .$this->nome.
                    "<br>Titulo: " .$this->titulo.
-                   "<br>Quantidade de Livro  " .$this->qtdLivro;
-    }//fim de imprimir
+                   "<br>Quantidade de Livro  " .$this->qtdLivro.
+                   "<br>E-mail: " .$this->email.
+                   "<br>Nome:    " .$this->nome;
+                   
+        }//fim de imprimir
     }
 ?> 

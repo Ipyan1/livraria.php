@@ -3,6 +3,7 @@
 namespace PHP\Modelo;
 
     class Endereco{
+        private int $codigo;
         private string $logradouro;
         private int $numero;
         private string $bairro;
@@ -13,6 +14,7 @@ namespace PHP\Modelo;
         private string $cep;
 
         public function __construct(
+            string $codigo,
             string $logradouro,
             int $numero,
             string $bairro,
@@ -22,6 +24,7 @@ namespace PHP\Modelo;
             string $pais,
             string $cep)
         {
+            $this->codigo     =$código;
             $this->logradouro = $logradouro;
             $this->numero     = $numero;
             $this->bairro     = $bairro;
@@ -42,7 +45,8 @@ namespace PHP\Modelo;
         }//fim do set genérico
 
         public function imprimir():string{
-            return "<br>Logradouro: ".$this->logradouro.
+            return "<br>Código:  ".$this->código.
+                "<br>Logradouro: ".$this->logradouro.
                 "<br>Número:     ".$this->numero.
                 "<br>Bairro:     ".$this->bairro.
                 "<br>Cidade:     ".$this->cidade.

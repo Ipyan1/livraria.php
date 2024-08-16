@@ -6,8 +6,8 @@ class Livros{
         private    int $codigo;
         private string $titulo;
         private string $autor;
-        private string $preco;
-        private string $qtdLivros;
+        private float $preco;
+        private int $qtdLivros;
 
         //Construtor
         public function __construct(
@@ -51,23 +51,23 @@ class Livros{
         switch($this->codigo){
             case 1:
                 return  "<br>Código: " .$this->codigo. 
-                        "<br>Título: " ."Harry Potter". 
-                        "<br>Autor: " . "J.K Rowling".
-                        "<br>Preço: ". "R$ 30,00". 
+                        "<br>Título: " ."A Guerra dos Tronos". 
+                        "<br>Autor: " . "George R.R Martin".
+                        "<br>Preço: ". "R$ 29,90". 
                         "<br>Quantidade de Livros: " . 1;
                 break;
                 case 2:
                     return  "<br>Código: " . $this->codigo. 
-                            "<br>Título: " . "Senhor dos anéis". 
-                            "<br>Autor: " . "   Tolkien".
-                            "<br>Preço: " . "   R$ 30,00". 
+                            "<br>Título: " . "A Pedra Filosofal". 
+                            "<br>Autor: " . "  J.K. Rowling".
+                            "<br>Preço: " . "   R$ 34,90". 
                             "<br>Quantidade de Livros: " . 2;
                     break;
                 case 3:
                     return  "<br>Código: " .$this->codigo. 
-                            "<br>Título: " . "Animal Planet". 
-                            "<br>Autor: " . "   Richard Rasmussen".
-                            "<br>Preço: " . "   R$ 30,00". 
+                            "<br>Título: " . " A Câmara Secreta". 
+                            "<br>Autor: " . "    J.K. Rowling".
+                            "<br>Preço: " . "   R$ 24,90". 
                             "<br>Quantidade de Livros: " . 3;
                     break;
             default:
